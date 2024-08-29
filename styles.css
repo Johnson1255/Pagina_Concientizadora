@@ -77,3 +77,36 @@ form button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.noticia {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: #fff;
+}
+
+.noticia img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.noticia h3 {
+    margin-top: 0;
+}
+
+.noticia p {
+    margin: 0.5em 0;
+}
+
+.noticia a {
+    color: #006400;
+    text-decoration: none;
+}
+
+.noticia a:hover {
+    text-decoration: underline;
+}
+
