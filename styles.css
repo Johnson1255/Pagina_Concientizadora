@@ -110,3 +110,24 @@ form button {
     text-decoration: underline;
 }
 
+#problema {
+    padding: 2em;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 2em;
+}
+
+#problema h2 {
+    color: #333;
+}
+
+#problema h3 {
+    margin-top: 1em;
+    color: #006400;
+}
+
+#problema p {
+    margin: 0.5em 0;
+}
+
