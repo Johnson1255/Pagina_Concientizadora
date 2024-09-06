@@ -1,0 +1,78 @@
+body {
+  font-family: 'Inria Serif', serif;
+  background-color: #00AEEF;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* Elimina el scroll */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #00AEEF;
+  border: solid 5px #00AEEF;
+  padding: 10px; /* Reduce el padding para acercar los elementos */
+  border-radius: 10px;
+  text-align: center;
+  max-width: 90%; /* Ajusta el tamaño para que no haya scroll */
+}
+
+.emblem-section img {
+  max-width: 100%; /* Ajusta el tamaño según sea necesario */
+  height: auto;
+  margin-bottom: 10px; /* Reduce el margen inferior para acercar los elementos */
+}
+
+.text-section p {
+  color: rgb(0, 0, 0);
+  font-size: 32px; /* Aumenta el tamaño de la letra */
+  margin-bottom: 5px; /* Reduce el margen inferior para acercar los elementos */
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 30px; /* Aumenta el tamaño del botón */
+  background-color: #6CC24A;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px; /* Añade margen superior para separar del texto */
+  font-size: 20px; /* Aumenta el tamaño de la letra del botón */
+}
+
+.button:hover {
+  background-color: #5AA239;
+}
+
+@media (min-width: 768px) {
+  .container {
+      flex-direction: row;
+      text-align: left;
+  }
+
+  .emblem-section {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end; /* Justifica al lado derecho */
+  }
+
+  .text-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; /* Justifica al centro */
+  }
+
+  .emblem-section img {
+      margin-right: 10px; /* Reduce el margen derecho para acercar los elementos */
+      margin-bottom: 0;
+  }
+}
