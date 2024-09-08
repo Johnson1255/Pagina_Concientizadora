@@ -21,4 +21,33 @@ document.addEventListener('DOMContentLoaded', (event) => {
             alert('Por favor, ingresa un email válido.');
         }
     });
+
+    document.getElementById('donationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        // Validar monto de donación
+        const monto = parseInt(document.getElementById('monto').value);
+        if (monto < 50) {
+            alert("El monto mínimo para donar es de 50 pesos.");
+            return;
+        }
+    
+        // Validar que los campos estén completos
+        const nombre = document.getElementById('nombre').value;
+        const cedula = document.getElementById('cedula').value;
+        const pais = document.getElementById('pais').value;
+        const direccion = document.getElementById('direccion').value;
+        const publicarNombre = document.querySelector('input[name="publicarNombre"]:checked');
+        const terminos = document.getElementById('terminos').checked;
+    
+        if (!nombre || !cedula || !pais || !direccion || !publicarNombre || !terminos) {
+            alert("Por favor, complete todos los campos y acepte los términos.");
+            return;
+        }
+    
+        // Mostrar mensaje de éxito
+        document.getElementById('resultado').style.display = 'block';
+    });
+    
+    
 });

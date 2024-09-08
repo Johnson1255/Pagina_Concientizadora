@@ -1,47 +1,102 @@
-:root {
-    --primary-color: #4a90e2;
-    --secondary-color: #f39c12;
-    --text-color: #333;
-    --bg-color: #f4f4f4;
-}
-
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--bg-color);
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
-    padding: 0 20px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 0.5em 1em;
-    margin-top: 1em;
-    background-color: #ffa500;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
 }
 
 header {
-    background: var(--primary-color);
-    color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: var(--secondary-color) 3px solid;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa el ancho completo */
+    background-color: #fff; /* Asegúrate de que tenga un fondo */
+    z-index: 1000; /* Para que esté por encima del contenido */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
 }
+
+body {
+    padding-top: 70px; /* Asegura espacio suficiente para que el contenido no se superponga al header */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    padding-top: 60px;
+}
+
+header .logo {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin-left: 10px; /* Deja algo de espacio a la izquierda */
+}
+
+header nav {
+    flex-grow: 1; /* Permite que el menú de navegación ocupe más espacio */
+    text-align: center; /* Centra los elementos del menú */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Espacia los elementos a lo largo de la barra */
+    margin: 0 20px; /* Ajusta el espacio entre el menú y el logo */
+    padding: 0;
+}
+
+header nav ul li {
+    flex: 1; /* Asegura que los elementos del menú ocupen el espacio disponible */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px; /* Aumenta el tamaño de la fuente de los enlaces */
+    padding: 10px; /* Aumenta el área clicable */
+    display: block;
+    text-transform: uppercase; /* Opcional: Convierte el texto a mayúsculas */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
 
 header a {
     color: #fff;
@@ -50,242 +105,292 @@ header a {
     font-size: 16px;
 }
 
-header .highlight, header .current a {
-    color: var(--secondary-color);
-    font-weight: bold;
-}
-
-header a:hover {
-    color: #ffffff;
-    font-weight: bold;
-}
-
-#navbar {
-    background: #333;
-    color: #fff;
-}
-
-#navbar ul {
+header ul {
     padding: 0;
     list-style: none;
 }
 
-#navbar li {
+header li {
+    float: left;
     display: inline;
+    padding: 0 20px;
 }
 
-#navbar a {
-    color: #fff;
+header #branding h1 {
+    float: left;
+    font-size: 2em;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight {
+    color: #77B5FE;
+    font-weight: bold;
+}
+.donaciones-button {
+    background-color: #007bff; /* Cambia a tu color deseado */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase; /* Texto en mayúsculas */
     text-decoration: none;
-    font-size: 18px;
-    padding-right: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
+.donaciones-button:hover {
+    background-color: #0056b3; /* Cambia el color al pasar el mouse */
+}
+
+
+/* Showcase Section */
 #showcase {
-    min-height: 400px;
-    background: url(/images/fondo.jpg) no-repeat center center/cover;
+    background: #f4f4f4; /* Fondo claro */
+    color: black; /* Texto en negro */
+    height: 80vh; /* Reducir la altura al 80% de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: #fff;
+    padding: 20px 0; /* Espaciado vertical más pequeño */
+}
+
+#showcase .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 10px 20px; /* Reducir el padding para hacer el contenedor más compacto */
 }
 
 #showcase h1 {
-    margin-top: 100px;
-    font-size: 55px;
-    margin-bottom: 10px;
+    font-size: 2.5rem; /* Reducir ligeramente el tamaño del título */
+    margin-bottom: 10px; /* Reducir el margen inferior del título */
+    color: black;
 }
 
 #showcase p {
-    font-size: 20px;
+    font-size: 1.1rem; /* Tamaño del texto un poco más pequeño */
+    color: black;
+    margin-bottom: 15px; /* Reducir el margen inferior del párrafo */
+}
+
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    background: #77B5FE;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+/* Sections */
+section {
+    padding: 20px 0;
+}
+
+#problema, #nosotros, #informacion, #ayudar, #noticias {
+    background: #fff;
+    padding: 40px 0;
+}
+
+#problema h2, #nosotros h2, #informacion h2, #ayudar h2, #noticias h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Estilos para los títulos en la sección de Problema y Objetivo */
+#problema h3 {
+    text-align: center; /* Centrar los títulos */
+    color: #007BFF; /* Color azul */
+    
+    margin-bottom: 15px; /* Espacio inferior */
+}
+
+/* Ajustar el párrafo debajo de cada título */
+#problema p {
+    text-align: justify;
+    font-size: 1rem; /* Tamaño estándar */
+    margin-bottom: 20px; /* Espacio inferior */
+    line-height: 1.6; /* Para mejor legibilidad */
 }
 
 #newsletter {
-    padding: 15px;
+    background: #333;
     color: #fff;
-    background: #35424a;
-}
-
-#newsletter h1 {
-    float: left;
-}
-
-#newsletter form {
-    float: right;
-    margin-top: 15px;
+    text-align: center;
+    padding: 40px 0;
 }
 
 #newsletter input[type="email"] {
-    padding: 4px;
-    height: 25px;
-    width: 250px;
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+    border: none;
 }
 
-.button_1 {
-    height: 38px;
-    background: var(--secondary-color);
-    border: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+#newsletter button {
+    padding: 10px 20px;
+    background: #77B5FE;
     color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
+#newsletter button:hover {
+    background: #0056b3;
+}
+
+/* Boxes Section */
 #boxes {
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 #boxes .box {
     float: left;
-    text-align: center;
     width: 30%;
-    padding: 10px;
+    text-align: center;
+    padding: 20px;
 }
 
 #boxes .box img {
     width: 90px;
 }
 
-footer {
+#boxes .box h3 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#boxes .box p {
+    font-size: 16px;
+    color: #666;
+}
+
+#boxes .box:hover {
+    background: #f4f4f4;
+    transition: background 0.3s;
+}
+
+/* Contact Section */
+#donaciones {
+    margin: 20px;
     padding: 20px;
-    margin-top: 20px;
-    color: #fff;
-    background-color: var(--primary-color);
-    text-align: center;
-}
-
-@media(max-width: 768px) {
-    header #branding,
-    header nav,
-    header nav li,
-    #newsletter h1,
-    #newsletter form,
-    #boxes .box {
-        float: none;
-        text-align: center;
-        width: 100%;
-    }
-
-    header {
-        padding-bottom: 20px;
-    }
-
-    #showcase h1 {
-        margin-top: 40px;
-    }
-
-    #newsletter button, .quote button {
-        display: block;
-        width: 100%;
-    }
-
-    #newsletter form input[type="email"],
-    .quote input,
-    .quote textarea {
-        width: 100%;
-        margin-bottom: 5px;
-    }
-}
-
-.noticia {
     border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 1em;
-    margin-bottom: 1em;
-    background-color: #fff;
+    border-radius: 10px;
+    background-color: #f9f9f9;
 }
 
-.noticia img {
-    max-width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.noticia h3 {
-    margin-top: 0;
-}
-
-.noticia p {
-    margin: 0.5em 0;
-}
-
-.noticia a {
-    color: #006400;
-    text-decoration: none;
-}
-
-.noticia a:hover {
-    text-decoration: underline;
+#donaciones h2 {
+    text-align: center;
+    color: #333;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
-    margin: auto;
-    margin-bottom: 80px;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-form label {
-    margin-top: 0.5em;
+label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
 }
 
-form input, form textarea {
-    padding: 0.5em;
-    margin-top: 0.5em;
-    border: 1px solid #ddd;
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
     border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-form button {
-    padding: 0.5em 1em;
-    margin-top: 1em;
-    background-color: #ffa500;
-    color: #fff;
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    font-weight: normal;
+}
+
+input[type="checkbox"] + label {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-#problema {
-    padding: 2em;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 2em;
+button:hover {
+    background-color: #0056b3;
 }
 
-#problema h2 {
-    color: #333;
+#resultado {
+    color: green;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
-#problema h3 {
-    margin-top: 1em;
-    color: #ffa500;
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
 }
 
-#problema p {
-    margin: 0.5em 0;
-}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header #branding,
+    header nav,
+    header nav ul {
+        float: none;
+        text-align: center;
+    }
 
-#nosotros {
-    padding: 2em;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 2em;
-}
+    header nav ul {
+        padding: 0;
+    }
 
-#informacion {
-    padding: 2em;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 2em;
-}
+    header nav ul li {
+        display: block;
+        padding: 10px;
+    }
 
-#ayudar {
-    padding: 2em;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 2em;
+    #boxes .box {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    #showcase h1 {
+        font-size: 35px;
+    }
 }
