@@ -1,6 +1,6 @@
 body {
   font-family: 'Inria Serif', serif;
-  background-color: #00AEEF;
+  background-color: #C9E7F2;
   margin: 0;
   padding: 0;
   display: flex;
@@ -15,8 +15,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #00AEEF;
-  border: solid 5px #00AEEF;
+  background-color: #C9E7F2;
+  border: solid 5px #C9E7F2;
   padding: 10px; /* Reduce el padding para acercar los elementos */
   border-radius: 10px;
   text-align: center;
